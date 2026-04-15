@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Universe Background */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/universe.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 450px;
+    height: 650px;
+    background: rgba(5, 20, 50, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+.chat-header {
+    background: #2f4f88;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Messages Area */
+.messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Bubbles */
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+#micBtn {
+    background-color: #2f4f88;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Bot Bubble */
+.bot-message {
+    background: #2f4f88;
+    color: white;
+    align-self: flex-start;
+}
+
+/* User Bubble */
+.user-message {
+    background: whitesmoke;
+    color: black;
+    align-self: flex-end;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    padding: 10px;
+    background: #0b1d3a;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Buttons */
+.input-area button {
+    margin-left: 8px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 50%;
+    background: #2f4f88;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-area button:hover {
+    background: #1e3c72;
+}
+
+/* Robot Animation */
+.robot {
+    position: absolute;
+    bottom: 80px;
+    right: 12px;
+    width: 60px;
+    animation: floatBot 3s ease-in-out infinite;
+}
+
+@keyframes floatBot {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Scrollbar Styling */
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: #2f4f88;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .chat-container {
+        width: 95%;
+        height: 90vh;
+    }
+}

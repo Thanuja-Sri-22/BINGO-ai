@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BingoAI – Virtual Front Desk Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            BingoAI Assistant
+        </div>
+
+        <img src="{{ url_for('static', filename='images/robot.png') }}" alt="BingoAI Robot" class="robot">
+
+        <div class="messages" id="messages"></div>
+
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type a message or press mic to speak...">
+            <button id="micBtn" onclick="startListening()">🎤</button>
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
