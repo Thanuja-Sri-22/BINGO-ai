@@ -12,9 +12,10 @@ A voice-based AI front desk assistant built using Python and Flask.
 - Python
 - Flask
 - HTML, CSS, JavaScript
+- Render
 
 ##Status
-🚧 Project in progress
+🚧 Project Completed
 
 ##Author
 Thanuja Sri
